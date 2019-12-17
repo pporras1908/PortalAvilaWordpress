@@ -1,0 +1,164 @@
+/* 
+Theme Name: SegurosAvila 
+Template Theme URI: https://SegurosAvila.com/
+Author: el equipo de PfcEvolution
+Description: Plantilla desarrollada para el Portal Seguros Avila
+Version: 1.0
+*/
+.logo{
+  padding-left: 60px;
+}
+.main-nav { 
+	height: 30px; 
+	margin: 50px 0 10px; 
+} 
+.main-nav ul { 
+	margin: 0; padding: 0;
+ } 
+.main-nav li { 
+	display: block; float: left; line-height: 30px;  
+	height: 30px; 
+	margin: 0; padding: 0; 
+	position: relative; 
+} 
+
+.main-nav li a { 
+	display: block; 
+	height: 30px; 
+	line-height: 
+	30px; padding: 0 15px; 
+	color :green;
+	text-decoration: none;
+	font-weight: bold;
+} 
+.header-home {
+  position: absolute;
+  top: 0px;
+ 
+}
+
+.nav-home {
+  position: absolute;
+  left: 0px;
+
+}
+
+.text-padding {
+ padding-left: 80px;
+ 
+}
+
+.text-sec-paragraph {
+  padding-left: 80px;
+  padding-bottom: 20px;
+ }
+
+.text-home-slogan {
+ font-size:70px;
+ font-weight: bold;
+ color: #0056b8;
+}
+
+ .text-title {
+  font-size: 50px;
+  font-weight: bold; 
+  color: #0056b8;
+  padding-left: 80px;
+ }
+
+ .text-subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  color: #0056b8;
+  padding-left: 80px;
+ }
+
+
+.text-footer {
+    color: #fff;
+    text-align : center;
+ }
+
+.footer {
+   background-color: #0056b8;
+    margin-left: 0%;
+    float: left;
+    margin-top: 5px;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-nav { 
+  height: auto;
+  margin: 0 auto; 
+  overflow: hidden;
+  text-align: left;
+  width: auto; 
+  padding-top: 20px ;
+  } 
+
+.footer-nav ul { 
+  float: left;
+  list-style-type: none; 
+  padding: 0; 
+  position: relative; 
+  left: 50%;
+ } 
+.footer-nav li { 
+  display: block; 
+  float: left;
+  position: relative; 
+  right: 50%;
+} 
+.footer-nav li a { 
+	padding: 10px;
+	color :#fff;
+	text-decoration: none;
+	font-weight: bold;
+} 
+
+.social [class*="fa fa-"] {
+  background-color: #fff;
+  border-radius: 30px;
+  color: #333;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  margin: auto 3px;
+  width: 30px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.img-right {
+  float: right;
+}
+
+.column{
+  float: left; 
+  margin-top: 80px ; 
+  width: 45%;
+}
+.column-right{
+  float: right;
+   width: 55%;
+}
+
+.column-media{
+  float: left; 
+  margin-top: 30px ; 
+  width: 30%;
+}
+
+.text-productos{
+  margin-top: 70px ; 
+  margin-left: 130px ; 
+}
+
+.wp-block-column-filler{
+    padding-left: 30%;
+}
+.wp-block-column-first{
+    padding-left: 20%;
+}
+
