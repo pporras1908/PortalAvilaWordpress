@@ -10,18 +10,18 @@ add_action('init', 'sp_cpt_news_init');
 function sp_cpt_news_init() {
   // Create new News custom post type
     $news_labels = array(
-                    'name'                 => _x('Noticias', 'sp-news-and-widget'),
-                    'singular_name'        => _x('Noticias', 'sp-news-and-widget'),
-                    'add_new'              => _x('Agregar Noticias', 'sp-news-and-widget'),
-                    'add_new_item'         => __('Agregar Noticias', 'sp-news-and-widget'),
-                    'edit_item'            => __('Editar Noticias Item', 'sp-news-and-widget'),
-                    'new_item'             => __('Nueva Noticias Item', 'sp-news-and-widget'),
-                    'view_item'            => __('Ver Noticias Item', 'sp-news-and-widget'),
-                    'search_items'         => __('Buscar  Noticias Items','sp-news-and-widget'),
-                    'not_found'            =>  __('No Noticias encontradas', 'sp-news-and-widget'),
-                    'not_found_in_trash'   => __('No Noticias Items encontradas en el Trash', 'sp-news-and-widget'),
+                    'name'                 => _x('News', 'sp-news-and-widget'),
+                    'singular_name'        => _x('news', 'sp-news-and-widget'),
+                    'add_new'              => _x('Add News Item', 'sp-news-and-widget'),
+                    'add_new_item'         => __('Add New News Item', 'sp-news-and-widget'),
+                    'edit_item'            => __('Edit News Item', 'sp-news-and-widget'),
+                    'new_item'             => __('New News Item', 'sp-news-and-widget'),
+                    'view_item'            => __('View News Item', 'sp-news-and-widget'),
+                    'search_items'         => __('Search  News Items','sp-news-and-widget'),
+                    'not_found'            =>  __('No News Items found', 'sp-news-and-widget'),
+                    'not_found_in_trash'   => __('No News Items found in Trash', 'sp-news-and-widget'),
                     'parent_item_colon'    => '',
-                    'menu_name'          => _x( 'Noticias', 'admin menu', 'sp-news-and-widget' )
+                    'menu_name'          => _x( 'News', 'admin menu', 'sp-news-and-widget' )
   );
   $news_args = array(
                     'labels'              => $news_labels,
@@ -53,17 +53,17 @@ add_action( 'init', 'news_taxonomies');
 
 function news_taxonomies() {
     $labels = array(
-                'name'              => _x( 'Categoria', 'sp-news-and-widget' ),
-                'singular_name'     => _x( 'Categoria', 'sp-news-and-widget' ),
-                'search_items'      => __( 'Buscar Categoria', 'sp-news-and-widget' ),
-                'all_items'         => __( 'Todas las Categorias', 'sp-news-and-widget' ),
-                'parent_item'       => __( 'Parent Categoria', 'sp-news-and-widget' ),
-                'parent_item_colon' => __( 'Parent Categoria:', 'sp-news-and-widget' ),
-                'edit_item'         => __( 'Editar Categoria', 'sp-news-and-widget' ),
-                'update_item'       => __( 'Update Categoria', 'sp-news-and-widget' ),
-                'add_new_item'      => __( 'Agregar New Categoria', 'sp-news-and-widget' ),
-                'new_item_name'     => __( 'Nueva Categoria Name', 'sp-news-and-widget' ),
-                'menu_name'         => __( 'Categoria', 'sp-news-and-widget' ),
+                'name'              => _x( 'Category', 'sp-news-and-widget' ),
+                'singular_name'     => _x( 'Category', 'sp-news-and-widget' ),
+                'search_items'      => __( 'Search Category', 'sp-news-and-widget' ),
+                'all_items'         => __( 'All Category', 'sp-news-and-widget' ),
+                'parent_item'       => __( 'Parent Category', 'sp-news-and-widget' ),
+                'parent_item_colon' => __( 'Parent Category:', 'sp-news-and-widget' ),
+                'edit_item'         => __( 'Edit Category', 'sp-news-and-widget' ),
+                'update_item'       => __( 'Update Category', 'sp-news-and-widget' ),
+                'add_new_item'      => __( 'Add New Category', 'sp-news-and-widget' ),
+                'new_item_name'     => __( 'New Category Name', 'sp-news-and-widget' ),
+                'menu_name'         => __( 'Category', 'sp-news-and-widget' ),
     );
 
     $args = array(

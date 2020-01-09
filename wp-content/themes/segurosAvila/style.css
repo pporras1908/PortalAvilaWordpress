@@ -5,8 +5,33 @@ Author: el equipo de PfcEvolution
 Description: Plantilla desarrollada para el Portal Seguros Avila
 Version: 1.0
 */
+
+
+.header-home{
+ height: 630px; 
+ width: 100%;
+ position: absolute;
+ top: 0px;
+}
+
+.buttom-home-suc{
+ height: 200px; 
+ width: 600px;
+
+}
+
+.buttom-home{
+ height: 300px; 
+ width: 400px;
+
+}
+
 .logo{
-  padding-left: 60px;
+	  padding-left: 60px;
+      height: 84px;
+      width: 220px;
+      background-size: cover;
+      background-repeat: no-repeat;
 }
 .main-nav { 
 	height: 30px; 
@@ -31,11 +56,7 @@ Version: 1.0
 	text-decoration: none;
 	font-weight: bold;
 } 
-.header-home {
-  position: absolute;
-  top: 0px;
- 
-}
+
 
 .nav-home {
   position: absolute;
@@ -60,15 +81,15 @@ Version: 1.0
 }
 
  .text-title {
+  font-family: 'AvenirNextLTPro-Bold';
   font-size: 50px;
-  font-weight: bold; 
-  color: #0056b8;
+   color: #0056b8;
   padding-left: 80px;
  }
 
  .text-subtitle {
+  font-family: 'AvenirNextLTPro-Bold';
   font-size: 30px;
-  font-weight: bold;
   color: #0056b8;
   padding-left: 80px;
  }
@@ -135,22 +156,26 @@ Version: 1.0
 }
 
 .column{
+  font-family: 'AvenirNextLTPro-Regular';
   float: left; 
   margin-top: 80px ; 
   width: 45%;
 }
 .column-right{
+font-family: 'AvenirNextLTPro-Regular';
   float: right;
    width: 55%;
 }
 
 .column-media{
+font-family: 'AvenirNextLTPro-Regular';
   float: left; 
   margin-top: 30px ; 
   width: 30%;
 }
 
 .text-productos{
+ font-family: 'AvenirNextLTPro-Bold';
   margin-top: 70px ; 
   margin-left: 130px ; 
 }
@@ -158,7 +183,40 @@ Version: 1.0
 .wp-block-column-filler{
     padding-left: 30%;
 }
+
+
 .wp-block-column-first{
-    padding-left: 20%;
+    padding-left: 5%;
+}
+.nk-awb-inner-div-img{
+	height:300px !important;
 }
 
+.bottonImagen {
+	width: 250px;
+}
+
+.bottonfirst{
+	margin-left: 70px ;
+}
+
+@font-face{
+    font-family: 'AvenirNextLTPro-Bold';
+    src: url('fonts/AVENIR/AvenirNextLTPro-Bold.otf');
+}
+
+@font-face{
+    font-family: 'AvenirNextLTPro-Regular';
+    src: url('fonts/AVENIR/AvenirNextLTPro-Regular.otf');
+}
+
+.wp-custom-header{
+height: 630px; 
+width: 100%;
+position: absolute;
+ top: 0px;
+}
+
+.wp-custom-header-video-button {
+    display:none
+}

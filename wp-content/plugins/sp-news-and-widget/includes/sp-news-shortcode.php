@@ -7,74 +7,32 @@ if ( !defined( 'ABSPATH' ) ) {
 function wpnaw_get_news( $atts, $content = null ){
 	// setup the query
 	extract(shortcode_atts(array(
-		"limit"                 => '',	
+		"limit"                 => 10,	
 		"category"              => '',
-		"grid"                  => '',
-		"show_date"             => '',
-		"show_category_name"    => '',
-		"show_content"          => '',
-		"show_full_content"     => '',
-		"content_words_limit"   => '',
+		"grid"                  => 1,
+		"show_date"             => 'true',
+		"show_category_name"    => 'true',
+		"show_content"          => 'true',
+		"show_full_content"     => 'false',
+		"content_words_limit"   => 20,
+		"order"					=> 'DESC',
+		"orderby"				=> 'date',
 		"pagination_type"       => 'numeric',
 	), $atts, 'sp_news'));
 	
-	// Define limit
+	// Define variables 
 	
-	if( $limit ) { 
-		$posts_per_page = $limit; 
-	} else {
-		$posts_per_page = -1;
-	}
-	
-	if( $category ) { 
-		$cat = $category; 
-	} else {
-		$cat = '';
-	}
-	
-	if( $grid ) { 
-		$gridcol = $grid; 
-	} else {
-		$gridcol = 1;
-	}
-	
-	if( $show_date ) { 
-		$showDate = $show_date; 
-	} else {
-		$showDate = 'true';
-	}
-	
-	if( $show_category_name ) { 
-		$showCategory = $show_category_name; 
-	} else {
-		$showCategory = 'true';
-	}
-	
-	if( $show_content ) { 
-		$showContent = $show_content; 
-	} else {
-		$showContent = 'true';
-	}
-	
-	if( $show_full_content ) { 
-		$showFullContent = $show_full_content; 
-	} else {
-		$showFullContent = 'false';
-	}
-	
-	if( $content_words_limit ) { 
-		$words_limit = $content_words_limit; 
-	} else {
-		$words_limit = 20;
-	}
-
-	if($pagination_type == 'numeric'){
-
-	   $pagination_type = 'numeric';
-	}else{
-
-		$pagination_type = 'next-prev';
-	}
+	$posts_per_page 	= !empty($limit) 					? $limit 						: 10;	
+	$cat 				= (!empty($category)) 				? explode(',', $category) 		: '';	
+	$gridcol 			= !empty($grid) 					? $grid 						: 1;
+	$showDate 			= ( $show_date == 'false' ) 		? 'false' 						: 'true';
+	$showCategory 		= ( $show_category_name == 'false' )? 'false' 						: 'true';	
+	$showContent 		= ( $show_content == 'false' ) 		? 'false' 						: 'true';
+	$showFullContent   	= ( $show_full_content == 'false' ) ? 'false' 						: 'true';	
+	$words_limit 		= (!empty($content_words_limit)) 	? $content_words_limit 			: 20;
+	$pagination_type   	= ( $pagination_type == 'numeric' ) ? 'numeric' 					: 'next-prev';	
+	$order 				= ( strtolower( $order ) == 'asc' ) 	? 'ASC' 						: 'DESC';
+	$orderby 			= !empty( $orderby )					? $orderby 						: 'date';
 
 	ob_start();
 	
@@ -86,9 +44,7 @@ function wpnaw_get_news( $atts, $content = null ){
 		 $paged = get_query_var('paged');
 	}
 
-	$post_type 		= WPNW_POST_TYPE;
-	$orderby 		= 'date';
-	$order 			= 'DESC';
+	$post_type 		= WPNW_POST_TYPE;	
 
 	$args = array ( 
 		'post_type'      => $post_type,
@@ -179,13 +135,13 @@ function wpnaw_get_news( $atts, $content = null ){
 						<?php }?>
 						<?php if($showContent == 'true'){?>        			 
 							<div class="news-content-excerpt">            			
-								<?php  if($showFullContent == "false" ) {
+								<?php  if($showFullContent == "false" ) {									
 									$excerpt = get_the_content(); ?>                				
 									<div class="news-short-content">                                    
 										<?php echo string_limit_newswords( $post->ID, $excerpt, $words_limit, '...'); ?>
 									</div>                				
-									<a href="<?php the_permalink(); ?>" class="news-more-link"><?php _e( 'leer mas ', 'sp-news-and-widget' ); ?></a>	
-								<?php } else {             				
+									<a href="<?php the_permalink(); ?>" class="news-more-link"><?php _e( 'Read More', 'sp-news-and-widget' ); ?></a>	
+								<?php } else { 									
 									the_content();
 								} ?>
 							</div><!-- .entry-content -->

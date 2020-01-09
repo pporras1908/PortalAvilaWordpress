@@ -64,10 +64,10 @@ add_theme_support( 'custom-logo', array(
  * 
  */
 $defaults = array(
-	'width'                  => 700,
-	'height'                 => 620,
-	'flex-height'            => false,
-	'flex-width'             => false,
+	'width'                  => 640,
+	'height'                 => 640,
+	'flex-height'            => true,
+	'flex-width'             => true,
 	'uploads'                => true,
 	'random-default'         => false,
 	'header-text'            => true,
@@ -75,9 +75,11 @@ $defaults = array(
 	'wp-head-callback'       => '',
 	'admin-head-callback'    => '',
 	'admin-preview-callback' => '',
-	'default-image' => get_template_directory_uri() . '/images/header.png',
+	'video' => true,
+	'default-image' => get_template_directory_uri() . '/images/header.png'
 );
 add_theme_support( 'custom-header', $defaults );
+
 
 function segurosAvila_enqueue_styles() {
     wp_register_style('bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
@@ -100,25 +102,13 @@ function segurosAvila_wp_setup() {
 add_action( 'after_setup_theme', 'segurosAvila_wp_setup' );
 
 
-function my_login_logo() { ?>
-  <style type="text/css">
-    #login h1 a, .login h1 a {
-    background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png);
-      height: 84px;
-      width: 184px;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  </style>
-<?php }//end my_login_logo()
-add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
-function my_login_logo_url() {
+function login_logo_url() {
   return home_url();
 }//end my_login_logo_url()
-add_filter( 'login_headerurl', 'my_login_logo_url' );
+add_filter( 'login_headerurl', 'login_logo_url' );
 
-function my_login_logo_url_title() {
-  return 'Nelio Software';
+function login_logo_url_title() {
+  return 'pfcevolution Software';
 }//end my_login_logo_url_title()
-add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+add_filter( 'login_headertitle', 'login_logo_url_title' );

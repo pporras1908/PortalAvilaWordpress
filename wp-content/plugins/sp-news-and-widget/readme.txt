@@ -2,7 +2,7 @@
 Contributors: wponlinesupport, anoopranawat, pratik-jain
 Tags: wponlinesupport, wordpress news plugin, news website, main news page scrolling , wordpress vertical news plugin widget, wordpress horizontal news plugin widget , Free scrolling news wordpress plugin, Free scrolling news widget wordpress plugin, WordPress set post or page as news, WordPress dynamic news, news, latest news, custom post type, cpt, widget, vertical news scrolling widget, news widget
 Requires at least: 4.0
-Tested up to: 5.3
+Tested up to: 5.3.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,11 +15,11 @@ Dynamic & easy-to-use WP news and Scrolling Widget.
 
 Website’s performance is the most significant thing for any online business owner. WP News and Scrolling Widget is one of the ways to effectively increase the dynamics of the online web space with news archives, scrolling news widgets and thumbnails. Add, manage and remove the news section on your CMS website.  
 
-View [DEMO](http://demo.wponlinesupport.com/sp-news/) | [PRO DEMO and Features](https://www.wponlinesupport.com/wp-plugin/sp-news-and-scrolling-widgets/) for additional information.
+Check [Demo and Features](https://demo.wponlinesupport.com/sp-news/) for additional information.
 
 View [Masonry Add-on](https://www.wponlinesupport.com/wordpress-plugin-addon/masonry-addon-wp-news-widgets/) with 12 designs and 7 effects.
 
-Also work with Gutenberg shortcode block.
+**Also work with Gutenberg shortcode block**.
 
 = Important Note For How to Install =
 
@@ -70,6 +70,8 @@ Arts news
 * **show_full_content :** [sp_news show_full_content="true"] (Display Full news content on main page if you do not want word limit. By default value is "false")
 * **show_category_name :** [sp_news show_category_name="true" ] (Display News category name OR not. By default value is "True". Options are "ture OR false").
 * **content_words_limit :** [sp_news content_words_limit="30" ] (Control News short content Words limt. By default limit is 20 words).
+* **Order:** [sp_news order="DESC"] (News order ie DESC or ASC).
+* **Order by**: [sp_news orderby="date"] (Order by news ie date, ID, author, title, modified, rand and menu_order etc).
 
 The plugin adds a News tab to your admin menu, which allows you to enter news items just as you would regular posts.
 
@@ -104,6 +106,7 @@ first select "Default" and save then again select "Custom Structure "  and save.
 > * 8 Designs for News List View.
 > * 13 Designs News Grid Box.
 > * 8 Designs News Grid Box Slider.
+> * Gutenberg Block Supports.
 > * WPBakery Page Builder Support
 > * News Ticker.
 > * 7 different types of Latest News widgets.
@@ -141,9 +144,7 @@ first select "Default" and save then again select "Custom Structure "  and save.
 1. Create a page with the any name and paste this short code  <code> [sp_news] </code>.
  
 = How to install : =
-[youtube https://www.youtube.com/watch?v=07IRBn1oXrU]  
-
-
+[youtube https://www.youtube.com/watch?v=07IRBn1oXrU]
 
 == Frequently Asked Questions ==
 
@@ -183,6 +184,10 @@ Yse  <code> [sp_news] </code>
 8. Also work with Gutenberg shortcode block.
 
 == Changelog ==
+
+= 4.2.1 (26, Dec 2019) =
+* [+] Added : Added 2 new parameter - order and orderby
+* [*] Improve some code in the shortcode file.
 
 = 4.2 (05, June 2019) =
 * [*] Fixed some css related issues for pagination.

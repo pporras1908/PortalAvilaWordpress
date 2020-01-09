@@ -19,7 +19,7 @@ add_action('admin_menu', 'wpnw_register_design_page');
  * @since 1.0.0
  */
 function wpnw_register_design_page() {
-	//add_submenu_page( 'edit.php?post_type='.WPNW_POST_TYPE, __('How it works - WP News and Scrolling Widgets', 'sp-news-and-widget'), __('How It Works', 'sp-news-and-widget'), 'edit_posts', 'wpnw-designs', 'wpnw_designs_page' );
+	add_submenu_page( 'edit.php?post_type='.WPNW_POST_TYPE, __('How it works - WP News and Scrolling Widgets', 'sp-news-and-widget'), __('How It Works', 'sp-news-and-widget'), 'edit_posts', 'wpnw-designs', 'wpnw_designs_page' );
 }
 
 /**
@@ -122,12 +122,6 @@ function wpnw_help_tabs() {
 													'url'				=> 'http://wponlinesupport.com/plugin-data-api/plugins-data.php',
 													'transient_key'		=> 'wpos_plugins_feed',
 													'transient_time'	=> 172800
-												),
-						'offers-feed' 	=> array(
-													'name'				=> __('WPOS Offers', 'sp-news-and-widget'),
-													'url'				=> 'http://wponlinesupport.com/plugin-data-api/wpos-offers.php',
-													'transient_key'		=> 'wpos_offers_feed',
-													'transient_time'	=> 86400,
 												)
 					);
 	return $wpos_feed_tabs;
@@ -147,6 +141,7 @@ function wpnw_howitwork_page() { ?>
 		.postbox-container .wpos-list li:before{font-family: dashicons; content: "\f139"; font-size:20px; color: #0073aa; vertical-align: middle;}
 		.wpnwm-wrap .wpos-button-full{display:block; text-align:center; box-shadow:none; border-radius:0;}
 		.wpnwm-shortcode-preview{background-color: #e7e7e7; font-weight: bold; padding: 2px 5px; display: inline-block; margin:0 0 2px 0;}
+		.upgrade-to-pro{font-size:18px; text-align:center; margin-bottom:15px;}
 	</style>
 
 	<div class="post-box-container">
@@ -212,8 +207,8 @@ function wpnw_howitwork_page() { ?>
 												</th>
 												<td>
 													<p><?php _e('Check plugin document for shortcode parameters and demo for designs.', 'sp-news-and-widget'); ?></p> <br/>
-													<a class="button button-primary" href="http://docs.wponlinesupport.com/wp-news-and-scrolling-widgets/" target="_blank"><?php _e('Documentation', 'sp-news-and-widget'); ?></a>									
-													<a class="button button-primary" href="http://demo.wponlinesupport.com/sp-news/" target="_blank"><?php _e('Demo for Designs', 'sp-news-and-widget'); ?></a>
+													<a class="button button-primary" href="https://docs.wponlinesupport.com/wp-news-and-scrolling-widgets/" target="_blank"><?php _e('Documentation', 'sp-news-and-widget'); ?></a>									
+													<a class="button button-primary" href="https://demo.wponlinesupport.com/sp-news/" target="_blank"><?php _e('Demo for Designs', 'sp-news-and-widget'); ?></a>
 												</td>
 											</tr>
 										</tbody>
@@ -242,7 +237,9 @@ function wpnw_howitwork_page() { ?>
 										<li>8 Designs for News List View.</li>
 										<li>3 Designs News Grid Box.</li>
 										<li>8 Designs News Grid Box Slider.</li>
-										<li>Visual Composer Page Builder Support</li>
+										<li>Gutenberg Block Supports</li>
+										<li>WPBakery Page Builder Supports</li>
+										<li>WP Templating Features</li>
 										<li>News Ticker.</li>
 										<li>7 different types of Latest News widgets.</li>
 										<li>Recent News Slider</li>
@@ -256,26 +253,13 @@ function wpnw_howitwork_page() { ?>
 										<li>Custom CSS</li>
 										<li>100% Multi language</li>
 									</ul>
-									<a class="button button-primary wpos-button-full" href="https://www.wponlinesupport.com/wp-plugin/sp-news-and-scrolling-widgets/" target="_blank"><?php _e('Go Premium ', 'sp-news-and-widget'); ?></a>	
-									<p><a class="button button-primary wpos-button-full" href="http://demo.wponlinesupport.com/prodemo/news-plugin-pro/" target="_blank"><?php _e('View PRO Demo ', 'sp-news-and-widget'); ?></a>			</p>								
+									<div class="upgrade-to-pro">Gain access to <strong>WP News and Scrolling Widgets</strong> included in <br /><strong>Essential Plugin Bundle</div>
+									<a class="button button-primary wpos-button-full" href="https://www.wponlinesupport.com/wp-plugin/sp-news-and-scrolling-widgets/?ref=WposPratik&utm_source=WP&utm_medium=WP-Plugins&utm_campaign=Upgrade-PRO" target="_blank"><?php _e('Go Premium ', 'sp-news-and-widget'); ?></a>	
+									<p><a class="button button-primary wpos-button-full" href="https://demo.wponlinesupport.com/prodemo/news-plugin-pro/" target="_blank"><?php _e('View PRO Demo ', 'sp-news-and-widget'); ?></a>			</p>								
 								</div><!-- .inside -->
 							</div><!-- #general -->
 						</div><!-- .meta-box-sortables ui-sortable -->
-					</div><!-- .metabox-holder -->
-
-					<div class="metabox-holder wpos-pro-box">
-                        <div class="meta-box-sortables ui-sortable">
-                            <div class="postbox">
-                                <h3 class="hndle">
-                                    <span><?php _e('Need PRO Support?', 'sp-news-and-widget'); ?></span>
-                                </h3>
-                                <div class="inside">
-                                    <p><?php _e('Hire our experts for WordPress website support.', 'sp-news-and-widget'); ?></p>
-                                    <p><a class="button button-primary wpos-button-full" href="https://www.wponlinesupport.com/projobs-support/" target="_blank"><?php _e('PRO Support', 'sp-news-and-widget'); ?></a></p>
-                                </div><!-- .inside -->
-                            </div><!-- #general -->
-                        </div><!-- .meta-box-sortables ui-sortable -->
-                    </div><!-- .metabox-holder -->
+					</div><!-- .metabox-holder -->					
 
 					<!-- Help to improve this plugin! -->
 					<div class="metabox-holder">

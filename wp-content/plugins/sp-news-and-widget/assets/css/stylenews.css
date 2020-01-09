@@ -1,6 +1,6 @@
 .news-clearfix:before, .news-clearfix:after{content: "";display: table;}
 .news-clearfix::after{clear: both;}
-.wpnawfree-plugin{margin:0 -15px; padding-left: 80px; !important;}
+.wpnawfree-plugin{margin:0 -15px !important;}
 .news-col-3, .news-col-4, .news-col-2{margin-bottom:30px;}
 .news-col-3, .news-col-4, .news-col-2, .news-col-1, .news-col-list{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .news-col-1 .news-inner-wrap-view, .news-col-list .news-inner-wrap-view{ border-bottom:1px solid #d1d1d1; padding-bottom:20px; margin-bottom:20px;}

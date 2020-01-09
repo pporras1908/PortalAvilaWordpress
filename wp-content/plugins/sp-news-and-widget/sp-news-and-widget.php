@@ -5,14 +5,14 @@ Plugin URL: https://www.wponlinesupport.com/plugins/
 Text Domain: sp-news-and-widget
 Domain Path: /languages/
 Description: A simple News and three widgets(static, scrolling and with thumbs) plugin. Also work with Gutenberg shortcode block.
-Version: 4.2
+Version: 4.2.1
 Author: WP OnlineSupport
 Author URI: https://www.wponlinesupport.com
 Contributors: WP OnlineSupport
 */
 
 if( !defined( 'WPNW_VERSION' ) ) {
-	define( 'WPNW_VERSION', '4.2' ); // Version of plugin
+	define( 'WPNW_VERSION', '4.2.1' ); // Version of plugin
 }
 if( !defined( 'WPNW_DIR' ) ) {
 	define( 'WPNW_DIR', dirname( __FILE__ ) ); // Plugin dir
@@ -106,8 +106,8 @@ function news_pagination($args = array()){
 					'current'   => max( 1, $args['paged'] ),
 					'total'     => $args['total'],
 					'prev_next' => true,
-					'prev_text' => __('« Previous', 'wp-blog-and-widgets'),
-					'next_text' => __('Next »', 'wp-blog-and-widgets'),
+					'prev_text' => __('« Previous', 'sp-news-and-widget'),
+					'next_text' => __('Next »', 'sp-news-and-widget'),
 				));
 	
 	echo paginate_links($paging);
