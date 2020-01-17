@@ -50,7 +50,11 @@
  .listing-item-image {
  
     min-height: 100px;
-    padding-left:20px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+    
 	
 }
 .listing-item-content {
@@ -85,7 +89,7 @@
 	font-family: 'AvenirNextLTPro-Bold';
 	font-size: 30px;
 	color: #0056b8;
-    padding-left: 80px;
+    
 }
  .blog-listing-grid {
     display: flex;

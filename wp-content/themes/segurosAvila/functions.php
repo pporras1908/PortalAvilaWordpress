@@ -105,10 +105,24 @@ add_action( 'after_setup_theme', 'segurosAvila_wp_setup' );
 
 function login_logo_url() {
   return home_url();
-}//end my_login_logo_url()
+}
 add_filter( 'login_headerurl', 'login_logo_url' );
 
 function login_logo_url_title() {
   return 'pfcevolution Software';
-}//end my_login_logo_url_title()
+}
 add_filter( 'login_headertitle', 'login_logo_url_title' );
+
+// Logo Personalizado login
+function my_login_logo() { ?>
+  <style type="text/css">
+    #login h1 a, .login h1 a {
+    background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png);
+      height: 184px;
+      width: 284px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+<?php }//end my_login_logo()
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
