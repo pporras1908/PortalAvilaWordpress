@@ -6,137 +6,163 @@ Description: Plantilla desarrollada para el Portal Seguros Avila
 Version: 1.0
 */
 
-
-.header-home{
- height: 630px; 
- width: 100%;
- position: absolute;
- top: 0px;
+.header-home {
+  height: 630px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
 }
 
-.buttom-home-suc{
- height: 200px; 
- width: 600px;
-
+.buttom-home-suc {
+  height: 200px;
+  width: 700px;
 }
 
-.buttom-home{
- height: 300px; 
- width: 400px;
-
+.buttom-home {
+  height: 200px;
+  width: 500px;
 }
 
-.logo{
-	  padding-left: 60px;
-      height: 84px;
-      width: 220px;
-      background-size: cover;
-      background-repeat: no-repeat;
+.logo {
+  padding-left: 60px;
+  height: 84px;
+  width: 220px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.main-nav { 
-	height: 30px; 
-	margin: 50px 0 10px; 
-} 
-.main-nav ul { 
-	margin: 0; padding: 0;
- } 
-.main-nav li { 
-	display: block; float: left; line-height: 30px;  
-	height: 30px; 
-	margin: 0; padding: 0; 
-	position: relative; 
-} 
 
-.main-nav li a { 
-	display: block; 
-	height: 30px; 
-	line-height: 
-	30px; padding: 0 15px; 
-	color :green;
-	text-decoration: none;
-	font-weight: bold;
-} 
+.main-nav {
+  height: 30px;
+  margin: 50px 0 10px;
+}
 
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  display: block;
+  float: left;
+  line-height: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.main-nav li a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+}
 
 .nav-home {
   position: absolute;
   left: 0px;
-
 }
 
 .text-padding {
- padding-left: 80px;
- 
+  padding-left: 80px;
 }
 
 .text-sec-paragraph {
   padding-left: 80px;
   padding-bottom: 20px;
- }
-
-.text-home-slogan {
- font-size:70px;
- font-weight: bold;
- color: #0056b8;
 }
 
- .text-title {
+.text-sec-paragraph-contact {
+  padding-left: 80px;
+  padding-bottom: 20px;
+  font-family: 'AvenirNextLTPro-Bold';
+  font-size: 16px;
+  text-align: center;
+}
+
+.text-contact {
+  color: #fff;
+  text-align: left;
+}
+
+.text-contact-default {
+  text-align: left !important;
+}
+
+.text-home-slogan {
+  font-size: 70px;
+  font-weight: bold;
+  color: #0056b8;
+}
+
+.text-title {
   font-family: 'AvenirNextLTPro-Bold';
   font-size: 50px;
-   color: #0056b8;
+  color: #0056b8;
   padding-left: 80px;
- }
+}
 
- .text-subtitle {
+.text-title-contacto {
+  font-family: 'AvenirNextLTPro-Bold';
+  font-size: 50px;
+  color: #fff;
+  padding-left: 80px;
+}
+
+.text-subtitle {
   font-family: 'AvenirNextLTPro-Bold';
   font-size: 30px;
   color: #0056b8;
   padding-left: 80px;
- }
-
-
-.text-footer {
-    color: #fff;
-    text-align : center;
- }
-
-.footer {
-   background-color: #0056b8;
-    margin-left: 0%;
-    float: left;
-    margin-top: 5px;
-    width: 100%;
-    bottom: 0;
 }
 
-.footer-nav { 
+.text-footer {
+  color: #fff;
+  text-align: center;
+}
+
+.footer {
+  background-color: #0056b8;
+  margin-left: 0%;
+  float: left;
+  margin-top: 5px;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-nav {
   height: auto;
-  margin: 0 auto; 
+  margin: 0 auto;
   overflow: hidden;
   text-align: left;
-  width: auto; 
-  padding-top: 20px ;
-  } 
+  width: auto;
+  padding-top: 20px;
+}
 
-.footer-nav ul { 
+.footer-nav ul {
   float: left;
-  list-style-type: none; 
-  padding: 0; 
-  position: relative; 
+  list-style-type: none;
+  padding: 0;
+  position: relative;
   left: 50%;
- } 
-.footer-nav li { 
-  display: block; 
+}
+
+.footer-nav li {
+  display: block;
   float: left;
-  position: relative; 
+  position: relative;
   right: 50%;
-} 
-.footer-nav li a { 
-	padding: 10px;
-	color :#fff;
-	text-decoration: none;
-	font-weight: bold;
-} 
+}
+
+.footer-nav li a {
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
 
 .social [class*="fa fa-"] {
   background-color: #fff;
@@ -155,68 +181,146 @@ Version: 1.0
   float: right;
 }
 
-.column{
+.column {
   font-family: 'AvenirNextLTPro-Regular';
-  float: left; 
-  margin-top: 80px ; 
+  float: left;
+  margin-top: 80px;
   width: 45%;
 }
-.column-right{
-font-family: 'AvenirNextLTPro-Regular';
+
+.column-right {
+  font-family: 'AvenirNextLTPro-Regular';
   float: right;
-   width: 55%;
+  width: 55%;
 }
 
-.column-media{
-font-family: 'AvenirNextLTPro-Regular';
-  float: left; 
-  margin-top: 30px ; 
+.column-media {
+  font-family: 'AvenirNextLTPro-Regular';
+  float: left;
+  margin-top: 30px;
   width: 30%;
 }
 
-.text-productos{
- font-family: 'AvenirNextLTPro-Bold';
-  margin-top: 70px ; 
-  margin-left: 130px ; 
+.columns {
+  -webkit-column-count: 2;
+  /* Chrome, Safari, Opera */
+  -webkit-column-width: 600px;
+  -webkit-column-gap: 4em;
+  -moz-column-count: 2;
+  /* Firefox */
+  -moz-column-width: 600px;
+  -moz-column-gap: 4em;
+  column-count: 2;
+  column-width: 600px;
+  column-gap: 4em;
 }
 
-.wp-block-column-filler{
-    padding-left: 30%;
+.columns-wp3 {
+  -webkit-column-count: 3;
+  /* Chrome, Safari, Opera */
+  -webkit-column-width: 400px;
+  -webkit-column-gap: 4em;
+  -moz-column-count: 3;
+  /* Firefox */
+  -moz-column-width: 400px;
+  -moz-column-gap: 4em;
+  column-count: 3;
+  column-width: 400px;
+  column-gap: 4em;
 }
 
-
-.wp-block-column-first{
-    padding-left: 5%;
+.columns-wp4 {
+  -webkit-column-count: 4;
+  /* Chrome, Safari, Opera */
+  -webkit-column-width: 200px;
+  -webkit-column-gap: 4em;
+  -moz-column-count: 4;
+  /* Firefox */
+  -moz-column-width: 200px;
+  -moz-column-gap: 4em;
+  column-count: 4;
+  column-width: 200px;
+  column-gap: 4em;
 }
-.nk-awb-inner-div-img{
-	height:300px !important;
+
+.columns-contact {
+  -webkit-column-count: 2;
+  /* Chrome, Safari, Opera */
+  -webkit-column-width: 500px;
+  -webkit-column-gap: 4em;
+  -moz-column-count: 2;
+  /* Firefox */
+  -moz-column-width: 500px;
+  -moz-column-gap: 4em;
+  column-count: 2;
+  column-width: 400px;
+  column-gap: 4em;
+}
+
+.text-productos {
+  font-family: 'AvenirNextLTPro-Bold';
+  margin-top: 70px;
+  margin-left: 130px;
+}
+
+.wp-block-column-filler {
+  padding-left: 30%;
+}
+
+.wp-block-column-first {
+  padding-left: 5%;
+}
+
+.nk-awb-inner-div-img {
+  height: 300px !important;
 }
 
 .bottonImagen {
-	width: 250px;
+  width: 250px;
 }
 
-.bottonfirst{
-	margin-left: 70px ;
+.bottonfirst {
+  margin-left: 70px;
 }
 
-@font-face{
-    font-family: 'AvenirNextLTPro-Bold';
-    src: url('fonts/AVENIR/AvenirNextLTPro-Bold.otf');
+@font-face {
+  font-family: 'AvenirNextLTPro-Bold';
+  src: url('fonts/AVENIR/AvenirNextLTPro-Bold.otf');
 }
 
-@font-face{
-    font-family: 'AvenirNextLTPro-Regular';
-    src: url('fonts/AVENIR/AvenirNextLTPro-Regular.otf');
+@font-face {
+  font-family: 'AvenirNextLTPro-Regular';
+  src: url('fonts/AVENIR/AvenirNextLTPro-Regular.otf');
 }
 
-.wp-custom-header{
-height: 630px; 
-width: 100%;
-position: absolute;
- top: 0px;
+.wp-custom-header {
+  height: 630px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
 }
 
 .wp-custom-header-video-button {
-    display:none
+  display: none
+}
+
+area {
+  cursor: pointer;
+  display: block;
+}
+
+@media only screen and (max-width: 1200px) {
+  img {
+    width: auto;
+    height: auto;
+  }
+  img.imgbox_wp {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .wp-custom-header {
+    display: none;
+  }
 }

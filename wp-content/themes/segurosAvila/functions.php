@@ -75,8 +75,8 @@ $defaults = array(
 	'wp-head-callback'       => '',
 	'admin-head-callback'    => '',
 	'admin-preview-callback' => '',
-	'video' => true,
-	'default-image' => get_template_directory_uri() . '/images/header.png'
+	'video' => true
+	
 );
 add_theme_support( 'custom-header', $defaults );
 
@@ -117,7 +117,7 @@ add_filter( 'login_headertitle', 'login_logo_url_title' );
 function my_login_logo() { ?>
   <style type="text/css">
     #login h1 a, .login h1 a {
-    background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png);
+      background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png);
       height: 184px;
       width: 284px;
       background-size: cover;
@@ -126,3 +126,27 @@ function my_login_logo() { ?>
   </style>
 <?php }//end my_login_logo()
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+add_action('wp_footer', 'my_custom_footer_code');
+function my_custom_footer_code(){
+?>
+<style type="text/css">
+    .footer-logo{
+      background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logopfc.jpg);
+      height: 184px;
+      width: 284px;
+      background-repeat: no-repeat;
+          }
+  </style>
+<?php
+};
+
+function wp_sa_scripts_basic()
+{
+  // Register the script like this for a theme:
+	wp_register_script( 'custom-script', get_template_directory_uri() . '/js/custom-script.js' );
+
+	// For either a plugin or a theme, you can then enqueue the script:
+	wp_enqueue_script( 'custom-script' );
+}
+add_action( 'wp_enqueue_scripts', 'wp_sa_scripts_basic' );

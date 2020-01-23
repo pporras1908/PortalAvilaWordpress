@@ -8,9 +8,8 @@
              </p>
          </div>
          <div class="social">
-             <i class="fa fa-facebook"></i>
-             <i class="fa fa-instagram"></i>
-             <i class="fa fa-twitter"></i>
+         <a href="https://www.instagram.com/segurosavila/"> <i class="fa fa-instagram"></i></a>
+         <a href="https://twitter.com/segurosavilaca?lang=es">    <i class="fa fa-twitter"></i></a>
          </div>
          <div>
              <ul class="footer-nav">
