@@ -1,0 +1,5 @@
+/wp-content/plugins/responsive-menu
+.env
+.env.backup
+.phpunit.result.cache
+*.log

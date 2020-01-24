@@ -35,10 +35,10 @@ class Wpnw_Admin {
 	function wpnw_register_menu() {
 
 		// Register plugin premium page
-		//add_submenu_page( 'edit.php?post_type='.WPNW_POST_TYPE, __('Upgrade to PRO - WP News and Scrolling Widgets', 'sp-news-and-widget'), '<span style="color:#2ECC71">'.__('Upgrade to PRO', 'sp-news-and-widget').'</span>', 'manage_options', 'wpnw-premium', array($this, 'wpnw_premium_page') );
+	//	add_submenu_page( 'edit.php?post_type='.WPNW_POST_TYPE, __('Upgrade to PRO - WP News and Scrolling Widgets', 'sp-news-and-widget'), '<span style="color:#2ECC71">'.__('Upgrade to PRO', 'sp-news-and-widget').'</span>', 'manage_options', 'wpnw-premium', array($this, 'wpnw_premium_page') );
 		
 		// Register plugin hire us page
-		add_submenu_page( 'edit.php?post_type='.WPNW_POST_TYPE, __('Hire Us', 'sp-news-and-widget'), '<span style="color:#2ECC71">'.__('Hire Us', 'sp-news-and-widget').'</span>', 'manage_options', 'wpnw-hireus', array($this, 'wpnw_hireus_page') );
+	//	add_submenu_page( 'edit.php?post_type='.WPNW_POST_TYPE, __('Hire Us', 'sp-news-and-widget'), '<span style="color:#2ECC71">'.__('Hire Us', 'sp-news-and-widget').'</span>', 'manage_options', 'wpnw-hireus', array($this, 'wpnw_hireus_page') );
 	}
 
 	/**

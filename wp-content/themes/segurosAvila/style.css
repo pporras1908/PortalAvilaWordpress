@@ -202,17 +202,23 @@ Version: 1.0
 }
 
 .columns {
-  -webkit-column-count: 2;
   /* Chrome, Safari, Opera */
+  -webkit-column-count: 2;
   -webkit-column-width: 600px;
   -webkit-column-gap: 4em;
-  -moz-column-count: 2;
+ 
   /* Firefox */
+  -moz-column-count: 2;
   -moz-column-width: 600px;
   -moz-column-gap: 4em;
+ 
   column-count: 2;
-  column-width: 600px;
+  column-width: 500px;
   column-gap: 4em;
+ }
+
+ p {
+  column-span: 1;
 }
 
 .columns-wp3 {
@@ -313,9 +319,11 @@ area {
   img {
     width: auto;
     height: auto;
+    
   }
   img.imgbox_wp {
     display: none;
+    
   }
 }
 

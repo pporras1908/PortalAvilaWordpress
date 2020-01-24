@@ -42,48 +42,77 @@ function column_box_shortcode( $atts, $content = null ) {
     'imagen'  => '',
 	'title'   => '',
 	'align'   => '',
-    'descrip' => '',
-	'extend' => '',
-	'extend_long' => '',
+    'paragraph1' => '',
+	'paragraph2' => '',
+	'paragraph3' => '',
+	'headerlist' => '',
 	'list' => '',
+	'headerlist2' => '',
+	'list2' => '',
   ), $atts)); 
 	
 	
 	if (esc_attr( $atts['list'])){
-		$ContentList = '<ul>';	
-		$list_incolumn = explode(";",esc_attr( $atts['list']));
-		foreach ($list_incolumn as $list){		
-		$ContentList .= '<li>' . $list . '</li>';
-		}
-		$ContentList .= '</ul>';
+		$ContentList1 = generate_list(esc_attr( $atts['list'])) ;	
 	}
 
+	if (esc_attr( $atts['list2'])){
+		$ContentList2 = generate_list(esc_attr( $atts['list2'])) ;	
+	}
+
+	if (esc_attr( $atts['paragraph1'])){
+		$paragraph1 =   '<p>' . esc_attr( $atts['paragraph1']) .  '</p>';
+	}
+
+	if (esc_attr( $atts['paragraph2'])){
+		$paragraph2 =   '<p>' . esc_attr( $atts['paragraph2']) .  '</p>';
+	}
+
+	if (esc_attr( $atts['paragraph3'])){
+		$paragraph3 =   '<p>' . esc_attr( $atts['paragraph3']) .  '</p>';
+	}
+
+	if (esc_attr( $atts['headerlist'])){
+		$headerlist =   '<p>' . esc_attr( $atts['headerlist']) .  '</p>';
+	}
+	
+	if (esc_attr( $atts['headerlist2'])){
+		$headerlist2 =   '<p>' . esc_attr( $atts['headerlist2']) .  '</p>';
+	}
+
+
+		$Content ='<div class="columns">';
+
      if (esc_attr( $atts['align'])=='LEFT') {
-		 $Content ='<div class="columns">';
 		 $Content .='	<span><img src="'.  esc_attr( $atts['imagen']) .'">' .'</span>';
 		 $Content .='	 <div class="listing-wrapper-column">';
 		 $Content .='          	<span class="listing-item">';
 		 $Content .='                 <span class="listing-item-content-column col-left">';
 		 $Content .='					  <h2 class="listing-item-title" style="text-align:right; padding-bottom: 20px;">'.  esc_attr( $atts['title']) . '</h2>';
-		 $Content .='				  <p>' . esc_attr( $atts['descrip']) .  '</p>';
-		 $Content .='				  <p>' . esc_attr( $atts['extend']) .  '</p>';
-		 $Content .='				  <p>' . esc_attr( $atts['extend_long']) .  '</p>';
-		 $Content .=                 $ContentList;
+		 $Content .=				 		$paragraph1;
+		 $Content .=				 		$paragraph2;
+		 $Content .=				 		$paragraph3;
+		 $Content .=				 		$headerlist;
+		 $Content .=                 		$ContentList1;
+		 $Content .=				 		$headerlist2;
+		 $Content .=                 		$ContentList2;
 		 $Content .='                </span>';
 		 $Content .='           </span>';
 		 $Content .=      '</div>';
 		 $Content .='</div>';
     }
 	if (esc_attr( $atts['align'])=='RIGHT') {
-		 $Content ='<div class="columns">';
 		 $Content .='	 <div class="listing-wrapper-column">';
 		 $Content .='          	<span class="listing-item">';
 		 $Content .='                 <span class="listing-item-content-column col-right">';
 		 $Content .='					  <h2 class="listing-item-title" style="text-align:left; padding-bottom: 20px;">'.  esc_attr( $atts['title']) . '</h2>';
-		 $Content .='				  <p>' . esc_attr( $atts['descrip']) .  '</p>';
-		 $Content .='				  <p>' . esc_attr( $atts['extend']) .  '</p>';
-		 $Content .='				  <p>' . esc_attr( $atts['extend_long']) .  '</p>';
-		 $Content .=                 $ContentList;
+		 $Content .=				 		$paragraph1;
+		 $Content .=				 		$paragraph2;
+		 $Content .=				 		$paragraph3;
+		 $Content .=				 		$headerlist;
+		 $Content .=                 		$ContentList1;
+		 $Content .=				 		$headerlist2;
+		 $Content .=                 		$ContentList2;
 		 $Content .='                </span>';
 		 $Content .='           </span>';
 		 $Content .=      '</div>';
@@ -151,4 +180,15 @@ function general_box_shortcode( $atts, $content = null ) {
 		 return $Content;
 }
 add_shortcode( 'general_box', 'general_box_shortcode' );
+
+function generate_list($objlist){
+		$ContentList = '<ul>';	
+		$list_incolumn = explode(";",$objlist);
+		foreach ($list_incolumn as $list){		
+		$ContentList .= '<li>' . $list . '</li>';
+		}
+		$ContentList .= '</ul>';
+		return $ContentList;
+	}		
+
 ?>

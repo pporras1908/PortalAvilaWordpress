@@ -23,7 +23,6 @@ function sp_cpt_news_init() {
                     'parent_item_colon'    => '',
                     'menu_name'          => _x( 'Noticias', 'admin menu', 'sp-news-and-widget' )
   );
-  
   $news_args = array(
                     'labels'              => $news_labels,
                     'public'              => true,
@@ -54,7 +53,7 @@ add_action( 'init', 'news_taxonomies');
 
 function news_taxonomies() {
     $labels = array(
-                        'name'              => _x( 'Categoria', 'sp-news-and-widget' ),
+                'name'              => _x( 'Categoria', 'sp-news-and-widget' ),
                 'singular_name'     => _x( 'Categoria', 'sp-news-and-widget' ),
                 'search_items'      => __( 'Buscar Categoria', 'sp-news-and-widget' ),
                 'all_items'         => __( 'Todas las Categorias', 'sp-news-and-widget' ),

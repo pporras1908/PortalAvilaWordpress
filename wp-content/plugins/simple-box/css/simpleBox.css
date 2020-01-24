@@ -144,18 +144,6 @@ span {
     text-align: justify;
 }
 
-.columns {
-    
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-	-webkit-column-width: 600px;
-	-webkit-column-gap: 4em;
-    -moz-column-count: 2; /* Firefox */
-	-moz-column-width: 600px;
-	-moz-column-gap: 4em;
-    column-count: 2;
-	column-width: 600px;
-	column-gap: 4em;
-}
 
 
 
