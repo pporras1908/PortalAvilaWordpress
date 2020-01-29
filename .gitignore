@@ -1,4 +1,5 @@
 /wp-content/plugins/responsive-menu
+/wp-content/uploads
 .env
 .env.backup
 .phpunit.result.cache
