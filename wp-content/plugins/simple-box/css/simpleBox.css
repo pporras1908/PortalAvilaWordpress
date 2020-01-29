@@ -158,8 +158,8 @@ span {
  }
  
 hr{
-    height:1px; 
-    border:none; 
+    height:1px !important; 
+    border:none !important; 
     border-top: 1px solid #337ab7 !important;
 }
 
@@ -171,6 +171,10 @@ hr{
     img {
        width:auto;
        height: auto;
+     }
+     .listing-wrapper-overcolumn{
+         padding-right: 30px;
+         padding-left: 70px;
      }
    
 }

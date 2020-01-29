@@ -215,6 +215,7 @@ Version: 1.0
   column-count: 2;
   column-width: 500px;
   column-gap: 4em;
+ /* prueba */ display: inline-block;
  }
 
  p {

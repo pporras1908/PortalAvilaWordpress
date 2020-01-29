@@ -142,7 +142,20 @@ function general_box_shortcode( $atts, $content = null ) {
 	'list' => '',
   ), $atts)); 
 	
-  // var_dump ($atts);
+	
+	
+	if (esc_attr( $atts['contact2'])){
+		$hr1 =   '<hr/>';
+		
+	}
+
+	if (esc_attr( $atts['contact3'])){
+		$hr2 =   '<hr/>';
+	}
+
+   if (esc_attr( $atts['address'])){
+		$hr3 =   '<hr/>';
+	}
 	
 	if (esc_attr( $atts['list'])){
 		$ContentList = '<ul>';	
@@ -161,13 +174,16 @@ function general_box_shortcode( $atts, $content = null ) {
 		 $Content .='					  <h3 class="listing-item-title" style="text-align:right; padding-bottom: 20px;">'.  esc_attr( $atts['title']) . '</h3>';
 		 $Content .='				  <p><strong>' . esc_attr( $atts['contact1']) .  '</strong></p>';
 		 $Content .='				  <p>' . esc_attr( $atts['position1']) .  '</p>';
-		 $Content .='				  <p>' . esc_attr( $atts['email1']) .  '</p><hr/>';
+		 $Content .='				  <p>' . esc_attr( $atts['email1']) .  '</p>';
+		 $Content .=                  $hr1;
 		 $Content .='				  <p><strong>' . esc_attr( $atts['contact2']) .  '</strong></p>';
 		 $Content .='				  <p>' . esc_attr( $atts['position2']) .  '</p>';
-		 $Content .='				  <p>' . esc_attr( $atts['email2']) .  '</p><hr/>';
+		 $Content .='				  <p>' . esc_attr( $atts['email2']) .  '</p>';
+		 $Content .=                  $hr2;
 		 $Content .='				  <p><strong>' . esc_attr( $atts['contact3']) .  '</strong></p>';
-		 $Content .='				  <p>' . esc_attr( $atts['position2']) .  '</p>';
-		 $Content .='				  <p>' . esc_attr( $atts['email3']) .  '</p><hr/>';
+		 $Content .='				  <p>' . esc_attr( $atts['position3']) .  '</p>';
+		 $Content .='				  <p>' . esc_attr( $atts['email3']) .  '</p>';
+		 $Content .=                  $hr3;
 		 $Content .='				  <p>' . esc_attr( $atts['address']) .  '</p>';
 		 $Content .='				  <p>' . esc_attr( $atts['phone']) .  '</p>';
 		 $Content .=                 $ContentList;
@@ -177,6 +193,8 @@ function general_box_shortcode( $atts, $content = null ) {
 		 $Content .=      '</div>';
 		 $Content .='</div>';
     
+
+
 		 return $Content;
 }
 add_shortcode( 'general_box', 'general_box_shortcode' );
