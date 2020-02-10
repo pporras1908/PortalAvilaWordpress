@@ -90,6 +90,7 @@ Version: 1.0
 
 .text-contact-default {
   text-align: left !important;
+  color: #bcbee0;
 }
 
 .text-home-slogan {
@@ -315,6 +316,24 @@ area {
   cursor: pointer;
   display: block;
 }
+
+
+ 
+ label[for="fileAttach"] {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #106BA0;
+  display: inline-block;
+  transition: all .5s;
+  cursor: pointer;
+  padding: 15px 40px !important;
+  border-radius: 15px;
+  width: fit-content;
+  text-align: center;
+  }
+ 
+
 
 @media only screen and (max-width: 1200px) {
   img {
