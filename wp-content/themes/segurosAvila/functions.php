@@ -54,10 +54,13 @@ add_filter('pre_get_posts','buscar_solo_posts');
  * 
  */
 add_theme_support( 'custom-logo', array(
+  'width'       => 140,
+	'height'      => 190,
 	'flex-height' => true,
 	'flex-width'  => true,
 	'header-text' => array( 'site-title', 'site-description' ),
 ) );
+
 
 /**
  * configuracion de header principal
@@ -115,15 +118,17 @@ add_filter( 'login_headertitle', 'login_logo_url_title' );
 
 // Logo Personalizado login
 function my_login_logo() { ?>
-  <style type="text/css">
-    #login h1 a, .login h1 a {
-      background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png);
-      height: 184px;
-      width: 284px;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  </style>
+<style type="text/css">
+#login h1 a,
+.login h1 a {
+    background-image: url(<?php echo get_stylesheet_directory_uri();
+    ?>/images/logo.png);
+    height: 200px;
+    width: 190px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+</style>
 <?php }//end my_login_logo()
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
@@ -131,13 +136,14 @@ add_action('wp_footer', 'my_custom_footer_code');
 function my_custom_footer_code(){
 ?>
 <style type="text/css">
-    .footer-logo{
-      background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logopfc.jpg);
-      height: 184px;
-      width: 284px;
-      background-repeat: no-repeat;
-          }
-  </style>
+.footer-logo {
+    background-image: url(<?php echo get_stylesheet_directory_uri();
+    ?>/images/logopfc.jpg);
+    height: 184px;
+    width: 284px;
+    background-repeat: no-repeat;
+}
+</style>
 <?php
 };
 
